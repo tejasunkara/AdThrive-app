@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
+The goal is to create a video library application using Angular 5 and Material 5 that provides an interface that:
+ * Lists the first 10 videos returned by the API ordered by date
+ * Provides pagination
+ * Works on modern web browsers
+
+Each video listing will include:
+ * Default Thumbnail
+ * Title
+ * Description (max length 150 characters)
+ * Published At
+
+The video library will use the YouTube API to get videos from the Angular channel. Here is an example request:
+https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCbn1OgGei-DV7aSRo_HaAiw&key=AIzaSyA8OHCyYSR7aFsJXsna7TumltQ0v56rUWU
+
+You can find more about how to use the API here: https://developers.google.com/youtube/v3/docs/search/list
+
+API requests should:
+ * Use the HttpClient
+ * Only request the rows immediately required
+ * Gracefully handle errors
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
